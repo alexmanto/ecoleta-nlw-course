@@ -13,10 +13,7 @@ module.exports = {
     },
     pool: {
         min: 0,
-        max: 10,
-        afterCreate: (conn: any, cb: any) => {
-            conn.run('PRAGMA busy_timeout = 6000', cb);
-        }
+        max: 10
     },
     acquireConnectionTimeout: 1000,
     useNullAsDefault: true
